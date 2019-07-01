@@ -14,7 +14,7 @@ const options = {
     autoCommit: false
 };
 
-const consumers = () => {
+exports.consumers = () => {
     const consumer = new kafka.Consumer(client, topics, options);
     
     consumer.on("message", function(message) { 
@@ -24,5 +24,5 @@ const consumers = () => {
 };
 
 setTimeout(() => {
-    consumers();
+    exports.consumers();
 }, 1000);
