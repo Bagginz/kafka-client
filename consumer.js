@@ -7,7 +7,7 @@ const client = new kafka.KafkaClient({
  
 const topics = [
     {
-        topic: "TutorialTopic"
+        topic: "kafka-node-dev"
     }
 ];
 const options = {
