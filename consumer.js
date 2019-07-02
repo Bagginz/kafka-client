@@ -1,13 +1,14 @@
 var kafka = require('kafka-node'),
     Consumer = kafka.Consumer,
-    client = new kafka.KafkaClient(),
+    client = new kafka.KafkaClient(z),
     consumer = new Consumer(
         client,
         [
             { topic: 'SampleTopic'}
         ],
         {
-            autoCommit: false
+            autoCommit: false,
+            autoCommitIntervalMs: 5000
         }
     );
 
